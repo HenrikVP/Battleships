@@ -6,10 +6,28 @@
 
     static void Main(string[] args)
     {
+        Menu();
         Grid();
         AddRandomShips(3);
         ShowGrid();
     }
+
+    private static void Menu()
+    {
+        Console.Write("Welcome to Battleships! Choose size of grid: ");
+
+        while (!int.TryParse(Console.ReadLine(), out size));
+
+        //do
+        //{
+        //    string input = Console.ReadLine();
+        //    bool b = int.TryParse(input, out size);
+        //    if (b) break;
+
+        //} while (true);
+        
+    }
+
     static void AddRandomShips(int ships)
     {
         for (int i = 0; i < ships; i++)
