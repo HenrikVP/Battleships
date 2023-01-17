@@ -16,8 +16,11 @@
     {
         Console.Write("Welcome to Battleships! Choose size of grid: ");
 
+        //As long as the input cannot parse to int the loop will continue
+        //If it CAN parse, then it outputs the value to [size] and
+        //the method returns true and breaks the while loop.
         while (!int.TryParse(Console.ReadLine(), out size));
-
+        coordinates = new int[size, size];
         //do
         //{
         //    string input = Console.ReadLine();
@@ -25,7 +28,7 @@
         //    if (b) break;
 
         //} while (true);
-        
+
     }
 
     static void AddRandomShips(int ships)
